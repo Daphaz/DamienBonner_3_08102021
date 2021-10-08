@@ -1,0 +1,17 @@
+%center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin nf {
+	&:not(:first-child) {
+		@content;
+	}
+}
+
+@mixin nl {
+	&:not(:last-child) {
+		@content;
+	}
+}

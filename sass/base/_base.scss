@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+	background: $clr-black;
+	color: $clr-white;
+}
+
+body {
+	@extend %description-16;
+	font-family: $font-roboto;
+
+	transition: all 0.3s ease;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+	color: inherit;
+}
+
+button {
+	color: inherit;
+	background: none;
+	border: none;
+	outline: none;
+	cursor: none;
+}
