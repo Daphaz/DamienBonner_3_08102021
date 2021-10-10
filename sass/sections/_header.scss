@@ -2,6 +2,24 @@
 	width: 100%;
 	max-width: 1440px;
 	margin: 0 auto;
+	z-index: 10;
+
+	&.fixed {
+		position: fixed;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+		background-color: $clr-white;
+	}
+
+	&__return {
+		position: absolute;
+		top: 50%;
+		left: 23px;
+		transform: translateY(-50%);
+		font-size: 2rem;
+	}
 
 	&__logo {
 		@extend %center;
@@ -12,6 +30,10 @@
 
 		img {
 			width: 160px;
+		}
+
+		@include media(">=phone") {
+			box-shadow: none;
 		}
 	}
 

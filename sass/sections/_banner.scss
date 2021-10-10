@@ -19,3 +19,34 @@
 		margin: 0 auto;
 	}
 }
+
+.banner__restaurant {
+	position: fixed;
+	top: 6.4rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	max-width: 1440px;
+	height: 28.3rem;
+	overflow: hidden;
+	z-index: -2;
+
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+#note_restaurant {
+	object-position: 0% 53%;
+}
+
+#french_restaurant {
+	object-position: 50% 0%;
+}
+
+#delice_restaurant {
+	object-position: 50% 0%;
+}

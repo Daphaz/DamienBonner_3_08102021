@@ -11,6 +11,7 @@ html {
 }
 
 body {
+	position: relative;
 	@extend %description-16;
 	font-family: $font-roboto;
 

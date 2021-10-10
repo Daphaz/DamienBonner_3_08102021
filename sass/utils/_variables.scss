@@ -5,11 +5,18 @@ $clr-gray100: #f6f6f6;
 $clr-gray500: #7e7e7e;
 $clr-gray700: #353535;
 $clr-primary: #9356dc;
+$clr-primary-light: #a576df;
 $clr-secondary: #ff79da;
+$clr-secondary-light: #fd9ee2;
 $clr-accent: #99e2d0;
-$clr-accent-text: #008766;
+$clr-accent-text: #005741;
 
 $clr-gradient: linear-gradient(to right bottom, $clr-secondary, $clr-primary);
+$clr-gradient-light: linear-gradient(
+	to right bottom,
+	$clr-secondary-light,
+	$clr-primary-light
+);
 
 $font-roboto: "Roboto", sans-serif;
 $font-shrikland: "Shrikhand", cursive;
