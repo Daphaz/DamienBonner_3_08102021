@@ -1,0 +1,32 @@
+@import "./base/reset";
+
+@import "./utils/variables";
+@import "./utils/responsive";
+@import "./utils/mixins";
+
+@import "./shared/titles";
+@import "./shared/descriptions";
+
+@import "./base/fonts";
+@import "./base/base";
+
+@import "./components/btn";
+@import "./components/card";
+@import "./components/divider";
+@import "./components/product";
+@import "./components/spinner";
+
+@import "./sections/header";
+@import "./sections/banner";
+@import "./sections/fonction";
+@import "./sections/restaurant";
+@import "./sections/footer";
+@import "./sections/informations";
+@import "./sections/entree";
+@import "./sections/plat";
+@import "./sections/dessert";
+
+@import "./page/french";
+@import "./page/note";
+@import "./page/palette";
+@import "./page/delice";

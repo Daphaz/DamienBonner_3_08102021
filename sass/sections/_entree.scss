@@ -1,0 +1,16 @@
+.entree {
+	&__title {
+		@extend %title-18;
+	}
+
+	&__list {
+		margin-bottom: 4rem;
+
+		@include media(">=phone") {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: baseline;
+			justify-content: space-around;
+		}
+	}
+}
