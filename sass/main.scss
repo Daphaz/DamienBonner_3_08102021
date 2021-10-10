@@ -10,6 +10,11 @@
 @import "./base/fonts";
 @import "./base/base";
 
-// Components.
+@import "./components/btn";
+@import "./components/card";
 
-// Pages.
+@import "./sections/header";
+@import "./sections/banner";
+@import "./sections/fonction";
+@import "./sections/restaurant";
+@import "./sections/footer";

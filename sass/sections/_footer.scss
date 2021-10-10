@@ -1,0 +1,55 @@
+.footer {
+	background-color: $clr-gray700;
+	padding: 1.5rem 2.4rem;
+	color: $clr-white;
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+
+	&__logo {
+		width: 100px;
+		height: 3.4rem;
+		margin-bottom: 1.2rem;
+		svg {
+			width: 100%;
+			path {
+				fill: $clr-white;
+			}
+		}
+
+		@include media(">=phone") {
+			margin: 0 auto;
+			margin-bottom: 1.2rem;
+		}
+	}
+
+	&__list {
+		padding-bottom: 2.2rem;
+
+		@include media(">=phone") {
+			display: flex;
+			margin: 0 auto;
+			max-width: 550px;
+			gap: 1.2rem;
+		}
+	}
+
+	&__item {
+		@include nl {
+			margin-bottom: 0.9rem;
+		}
+
+		&-thin {
+			font-weight: 200;
+		}
+
+		i {
+			font-size: 1.2rem;
+			padding-right: 1rem;
+		}
+
+		#f-icon {
+			padding-right: 0.6rem;
+		}
+	}
+}

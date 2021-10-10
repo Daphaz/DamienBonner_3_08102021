@@ -1,0 +1,116 @@
+.card {
+	background-color: $clr-white;
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+
+	&__header {
+		border-radius: 15px 15px 0 0;
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		height: 17.5rem;
+
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.8s $ease-out-expo;
+		}
+
+		.new {
+			@extend %center;
+			position: absolute;
+			min-width: 80px;
+			height: 30px;
+			padding: 12px;
+			top: 13px;
+			right: 13px;
+			z-index: 1;
+			background-color: $clr-accent;
+			color: $clr-accent-text;
+			font-size: 1.2rem;
+			font-weight: bold;
+			border-radius: 2px;
+			box-shadow: 0 1px 15px rgba(0, 0, 0, 0.25);
+		}
+
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&__body {
+		display: flex;
+		padding: 1.4rem 1.2rem 1.8rem;
+	}
+
+	&__info {
+		flex-grow: 1;
+		@extend %description-18;
+		strong {
+			display: block;
+			font-weight: bold;
+			line-height: 1.24;
+		}
+		span {
+			font-weight: 300;
+			line-height: 1.24;
+		}
+	}
+
+	&__like {
+		padding-right: 1.2rem;
+	}
+
+	&__heart {
+		position: relative;
+		fill: transparent;
+		stroke: $clr-black;
+		cursor: pointer;
+		stroke-width: 20;
+
+		svg {
+			overflow: visible;
+			width: 24px;
+		}
+
+		path {
+			stroke-dashoffset: 0;
+			stroke-dasharray: 1550;
+			transform-origin: center;
+		}
+
+		.heart-bg {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			stroke: none;
+		}
+
+		.heart-bg path {
+			fill-opacity: 0;
+		}
+
+		&:hover {
+			.heart-bg path {
+				animation: fill-animation 2s $ease-out-expo forwards;
+			}
+		}
+	}
+}
+
+@keyframes fill-animation {
+	from {
+		fill-opacity: 0;
+	}
+	to {
+		fill-opacity: 1;
+	}
+}

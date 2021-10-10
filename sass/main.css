@@ -129,10 +129,35 @@ table {
   border-spacing: 0;
 }
 
-body {
+.btn, .card__header .new, .header__logo, .header__info, .fonction__item_index {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner__title, .fonction__title, .restaurant__title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 1.24;
+  font-family: "Roboto", sans-serif;
+}
+
+body, .btn {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.5;
+}
+
+.card__info, .banner__description {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.3333333;
 }
 
 @font-face {
@@ -248,8 +273,8 @@ body {
 
 html {
   font-size: 10px;
-  background: #1a1a1a;
-  color: #f9f0e5;
+  background: #ffffff;
+  color: #101010;
 }
 
 body {
@@ -270,5 +295,413 @@ button {
   border: none;
   outline: none;
   cursor: none;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.btn-primary {
+  height: 50px;
+  border-radius: 25px;
+  color: #ffffff;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(to right bottom, #ff79da, #9356dc);
+  -webkit-box-shadow: -1px 2px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: -1px 2px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card__header {
+  border-radius: 15px 15px 0 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 17.5rem;
+}
+
+.card__header img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.card__header .new {
+  position: absolute;
+  min-width: 80px;
+  height: 30px;
+  padding: 12px;
+  top: 13px;
+  right: 13px;
+  z-index: 1;
+  background-color: #99e2d0;
+  color: #008766;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 15px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 15px rgba(0, 0, 0, 0.25);
+}
+
+.card__header:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.card__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.4rem 1.2rem 1.8rem;
+}
+
+.card__info {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.card__info strong {
+  display: block;
+  font-weight: bold;
+  line-height: 1.24;
+}
+
+.card__info span {
+  font-weight: 300;
+  line-height: 1.24;
+}
+
+.card__like {
+  padding-right: 1.2rem;
+}
+
+.card__heart {
+  position: relative;
+  fill: transparent;
+  stroke: #101010;
+  cursor: pointer;
+  stroke-width: 20;
+}
+
+.card__heart svg {
+  overflow: visible;
+  width: 24px;
+}
+
+.card__heart path {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1550;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.card__heart .heart-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  stroke: none;
+}
+
+.card__heart .heart-bg path {
+  fill-opacity: 0;
+}
+
+.card__heart:hover .heart-bg path {
+  -webkit-animation: fill-animation 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+          animation: fill-animation 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@-webkit-keyframes fill-animation {
+  from {
+    fill-opacity: 0;
+  }
+  to {
+    fill-opacity: 1;
+  }
+}
+
+@keyframes fill-animation {
+  from {
+    fill-opacity: 0;
+  }
+  to {
+    fill-opacity: 1;
+  }
+}
+
+.header {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header__logo {
+  width: 100%;
+  text-align: center;
+  height: 6.4rem;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.header__logo img {
+  width: 160px;
+}
+
+.header__info {
+  position: relative;
+  color: #101010;
+  background-color: #eaeaea;
+  height: 5rem;
+  z-index: -1;
+}
+
+.header__info span {
+  width: 161.63px;
+  font-weight: 500;
+  font-size: 1.6rem;
+  letter-spacing: 0.16px;
+}
+
+.header__info i {
+  padding-right: 1.2rem;
+}
+
+.banner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 3.9rem 3rem 5.7rem;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.banner__title {
+  padding-bottom: 1.5rem;
+}
+
+.banner__description {
+  padding-bottom: 2.8rem;
+}
+
+.banner .btn {
+  max-width: 21.8rem;
+  margin: 0 auto;
+}
+
+.fonction {
+  padding: 4.8rem 2rem;
+  height: 44rem;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.fonction__title {
+  padding-bottom: 2.7rem;
+}
+
+.fonction__list {
+  padding-left: 12px;
+}
+
+.fonction__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background-color: #f6f6f6;
+  height: 75px;
+  border-radius: 20px;
+  -webkit-box-shadow: -1px 2px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: -1px 2px 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 323px;
+  margin: 0 auto;
+}
+
+.fonction__item.active {
+  background-color: #f5edff;
+}
+
+.fonction__item.active i {
+  color: #9356dc;
+}
+
+.fonction__item_container {
+  margin-left: 3.5rem;
+}
+
+.fonction__item_container span {
+  font-weight: 600;
+}
+
+.fonction__item i {
+  padding-right: 2rem;
+  color: #7e7e7e;
+}
+
+.fonction__item_index {
+  color: #ffffff;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 50%;
+  left: -12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #9356dc;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.fonction__item:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+@media (min-width: 768px) {
+  .fonction {
+    height: initial;
+  }
+  .fonction__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.restaurant {
+  padding: 4.8rem 2rem;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #f6f6f6;
+}
+
+.restaurant__title {
+  padding-bottom: 2.7rem;
+}
+
+.restaurant__item {
+  height: 25.2rem;
+  width: 100%;
+}
+
+.restaurant__item:not(:last-child) {
+  margin-bottom: 1.8rem;
+}
+
+@media (min-width: 768px) {
+  .restaurant__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1.6rem;
+  }
+  .restaurant__item {
+    max-width: 33.6rem;
+  }
+}
+
+#palette,
+#french,
+#delice {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+#note {
+  -o-object-position: 50% 62%;
+     object-position: 50% 62%;
+}
+
+.footer {
+  background-color: #353535;
+  padding: 1.5rem 2.4rem;
+  color: #ffffff;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.footer__logo {
+  width: 100px;
+  height: 3.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.footer__logo svg {
+  width: 100%;
+}
+
+.footer__logo svg path {
+  fill: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .footer__logo {
+    margin: 0 auto;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.footer__list {
+  padding-bottom: 2.2rem;
+}
+
+@media (min-width: 768px) {
+  .footer__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    max-width: 550px;
+    gap: 1.2rem;
+  }
+}
+
+.footer__item:not(:last-child) {
+  margin-bottom: 0.9rem;
+}
+
+.footer__item-thin {
+  font-weight: 200;
+}
+
+.footer__item i {
+  font-size: 1.2rem;
+  padding-right: 1rem;
+}
+
+.footer__item #f-icon {
+  padding-right: 0.6rem;
 }
 /*# sourceMappingURL=main.css.map */

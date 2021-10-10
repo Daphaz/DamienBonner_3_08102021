@@ -1,0 +1,42 @@
+.restaurant {
+	padding: 4.8rem 2rem;
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	background-color: $clr-gray100;
+
+	&__title {
+		@extend %title-24;
+		padding-bottom: 2.7rem;
+	}
+
+	&__item {
+		height: 25.2rem;
+		width: 100%;
+
+		@include nl {
+			margin-bottom: 1.8rem;
+		}
+	}
+
+	@include media(">=phone") {
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 1.6rem;
+		}
+		&__item {
+			max-width: 33.6rem;
+		}
+	}
+}
+
+#palette,
+#french,
+#delice {
+	object-position: bottom;
+}
+#note {
+	object-position: 50% 62%;
+}
