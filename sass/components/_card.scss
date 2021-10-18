@@ -98,8 +98,20 @@
 			fill-opacity: 0;
 		}
 
-		&:hover {
-			.heart-bg path {
+		label {
+			cursor: pointer;
+		}
+
+		.heart__input {
+			cursor: pointer;
+			position: absolute;
+			width: 18px;
+			height: 18px;
+			opacity: 0;
+		}
+
+		.heart__input:checked {
+			& ~ .heart-bg path {
 				animation: fill-animation 2s $ease-out-expo forwards;
 			}
 		}

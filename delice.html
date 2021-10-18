@@ -44,33 +44,41 @@
 			<header class="informations__header">
 				<h1 class="informations__title">Le délice des sens</h1>
 				<div class="card__heart">
-					<svg
-						class="heart-main"
-						width="100"
-						viewBox="0 0 512 512"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+					<label for="heart__input5">
+						<input
+							type="checkbox"
+							name="heart"
+							id="heart__input5"
+							class="heart__input"
 						/>
-					</svg>
-					<svg
-						class="heart-bg"
-						width="100"
-						viewBox="0 0 512 512"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<defs>
-							<linearGradient id="Gradient5" x1="1" x2="0" y1="0" y2="1">
-								<stop offset="10%" stop-color="#9356dc" />
-								<stop offset="100%" stop-color="#ff79da" />
-							</linearGradient>
-						</defs>
-						<path
-							fill="url(#Gradient5)"
-							d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
-						/>
-					</svg>
+						<svg
+							class="heart-main"
+							width="100"
+							viewBox="0 0 512 512"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+							/>
+						</svg>
+						<svg
+							class="heart-bg"
+							width="100"
+							viewBox="0 0 512 512"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<defs>
+								<linearGradient id="Gradient5" x1="1" x2="0" y1="0" y2="1">
+									<stop offset="10%" stop-color="#9356dc" />
+									<stop offset="100%" stop-color="#ff79da" />
+								</linearGradient>
+							</defs>
+							<path
+								fill="url(#Gradient5)"
+								d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+							/>
+						</svg>
+					</label>
 				</div>
 			</header>
 			<section class="entree">
@@ -248,26 +256,30 @@
 					/>
 				</svg>
 			</div>
-			<ul class="footer__list">
-				<li class="footer__item">
-					<a href="#footer">
-						<i class="fas fa-utensils"></i>
-						<span>Proposer un restaurant</span>
-					</a>
-				</li>
-				<li class="footer__item">
-					<a href="#footer">
-						<i id="f-icon" class="fas fa-hands-helping"></i>
-						<span>Devenir partenaire</span>
-					</a>
-				</li>
-				<li class="footer__item">
-					<a class="footer__item-thin" href="#footer">Mentions légales</a>
-				</li>
-				<li class="footer__item">
-					<a class="footer__item-thin" href="mailto:contact@ohmyfood.com">Contact</a>
-				</li>
-			</ul>
+			<nav class="footer_navbar">
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a href="#footer">
+							<i class="fas fa-utensils"></i>
+							<span>Proposer un restaurant</span>
+						</a>
+					</li>
+					<li class="footer__item">
+						<a href="#footer">
+							<i id="f-icon" class="fas fa-hands-helping"></i>
+							<span>Devenir partenaire</span>
+						</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__item-thin" href="#footer">Mentions légales</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__item-thin" href="mailto:contact@ohmyfood.com"
+							>Contact</a
+						>
+					</li>
+				</ul>
+			</nav>
 		</footer>
 		<!-- End Footer -->
 	</body>
