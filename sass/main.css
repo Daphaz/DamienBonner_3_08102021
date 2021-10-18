@@ -477,7 +477,19 @@ button {
   fill-opacity: 0;
 }
 
-.card__heart:hover .heart-bg path {
+.card__heart label {
+  cursor: pointer;
+}
+
+.card__heart .heart__input {
+  cursor: pointer;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+}
+
+.card__heart .heart__input:checked ~ .heart-bg path {
   -webkit-animation: fill-animation 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
           animation: fill-animation 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
