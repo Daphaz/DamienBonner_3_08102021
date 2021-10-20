@@ -11,6 +11,10 @@
 	}
 	&__list {
 		padding-left: 12px;
+
+		@include media(">=phone") {
+			gap: 0.5rem;
+		}
 	}
 	&__item {
 		display: flex;
